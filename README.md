@@ -4,6 +4,8 @@ This project is based on https://codelabs.developers.google.com/codelabs/firesto
 
 It uses firebase and react.
 
+Prototype is ready.
+
 ## Usege
 
 to do:
