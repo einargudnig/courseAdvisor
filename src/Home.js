@@ -9,9 +9,9 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 import Header from './Header';
 import config from './config';
 
-import * as Data from './FriendlyEats/Data';
+import * as Data from './Courses/Data';
 // import * as FriendlyEatsMock from './FriendlyEats/FriendlyEats.Mock';
-import * as Search from './FriendlyEats/Search';
+import * as Search from './Courses/Search';
 
 const styles = theme => ({
   root: {
@@ -56,7 +56,7 @@ const reducer = (state, action) => {
 }
 
 function Home(props) {
-  const { classes, errorToggle, setErrorType, setErrorModalOpen } = props;
+  const { classes, /*errorToggle,*/ setErrorType, setErrorModalOpen } = props;
 
   const [courses, setCourses] = useReducer(reducer, []); 
   const [state, setState] = useState({}); 
@@ -127,11 +127,12 @@ function Home(props) {
     }
     return ret;
   }
-  const semesterOptions = Search.data.semester.map((name) => {
+  const semesterOptions = ['Autumn', 'Spring'].map((name) => {
     return {value: name, label: name, type: "semester" }
   })
-  semesterOptions.unshift({value: "Any", label: "semester", type: "semester" });
+  // semesterOptions.unshift({value: "Any", label: "semester", type: "semester" });
 
+  
   const categoryOptions = Search.data.category.map((name) => {
     return {value: name, label: name, type: 'city' }
   }); 
@@ -142,9 +143,10 @@ function Home(props) {
   });
   priceOptions.unshift({value: "Any", label: "全て", type: "price" });
 
+  /*
   const sortOrderOptions = ['Rating', 'Reviews'].map((name) => {
     return {value: name, label: name, type: "sort" }
-  });
+  }); */
 
   const handleChange =(e) => {
     const newState = Object.assign({}, state);
@@ -159,14 +161,14 @@ function Home(props) {
   }
   const submitButton = () => { 
     const filters = {
-      city: getStateValue("city"),
-      category: getStateValue("semester"),
-      price: getStateValue("price"),
-      sortOrder: getStateValue("sort"),
+      //city: getStateValue("city"),
+      semester: getStateValue("semester"),
+      // price: getStateValue("price"),
+      // sortOrder: getStateValue("sort"),
     }
     setSearchState(filters);
   }
-  const { city, semester, price, sort } = state;
+  const { /*city,*/ semester , /*price, sort*/ } = state;
 
   return (
     <React.Fragment>
@@ -184,7 +186,7 @@ function Home(props) {
       <Select options={priceOptions} value={price} onChange={handleChange} placeholder="金額"/>
       </Grid>
       <Grid item xs={2}>
-      <Select options={sortOrderOptions} value={sort} onChange={handleChange} placeholder="順"/>
+      <Select options={sortOrderOptions} value={sort} onChange={handleChange} placeholder="Order"/>
       </Grid>*/}
       <Grid item xs={3}>
       <Button onClick={submitButton} color="primary" className={classes.button} >Search</Button>

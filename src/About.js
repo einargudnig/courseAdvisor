@@ -24,14 +24,20 @@ const About = props => {
       <Header />
       <Grid container justify="center" alignItems="center" direction="row" className={classes.root}>
           <Grid className={classes.caption}>
-           <Typography component="h2" variant="h5" gutterBottom>
-            <b>This is yet another  Friendly Eats React version.</b><br/>
-            Origina friendlyeats-web is <a href="https://github.com/firebase/friendlyeats-web">here</a><br/>
-            <a href="https://codelabs.developers.google.com/codelabs/firestore-web/index.html">Original Friendly Eats document</a>
+            <Typography component="h2" variant="h5" gutterBottom>
+            <b>What is CourseAdvisor?</b><br/>
+            <b>CourseAdvisor</b> can help you to make a decision on what courses you can choose to take.<br />
+            Right now this does only apply for non mandatory courses in Computer Science at the University of Iceland.<br />
+            Here you can find more information on these course. <br />
+            I recommend that you grade and review every class that you have already been a part of, so that students that are <br />
+            not sure on what courses to choose will have reviews from former students to help them choose their non mandatory courses.
             <br />
-            <a href="https://github.com/isamu/FriendlyEats-React">Friendly Eats React version</a><br />
-            <a href="https://github.com/isamu/FriendlyEats-vue">Friendly Eats Vue.js version</a><br />
-            <a href="https://www.amazon.jp/hz/wishlist/ls/1DQ5CDEVBQDIP?ref_=wl_share">My Wishlist</a><br/>
+            <br />
+            You can click on each course to see more details, such as, reviews and every rating. <br />
+            You will also find a link that has more detailed information on the University's website.
+            <br />
+            <br />
+            It is important to know that each grade/review can be from different years, courses do change over the years, new teachers arrives and more. So please keep that in mind.
           </Typography>
           </Grid>
       </Grid>

@@ -1,0 +1,232 @@
+[debug] [2020-05-25T15:15:29.478Z] ----------------------------------------------------------------------
+[debug] [2020-05-25T15:15:29.479Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Einar\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2020-05-25T15:15:29.480Z] CLI Version:   8.2.0
+[debug] [2020-05-25T15:15:29.480Z] Platform:      win32
+[debug] [2020-05-25T15:15:29.480Z] Node Version:  v11.6.0
+[debug] [2020-05-25T15:15:29.481Z] Time:          Mon May 25 2020 15:15:29 GMT+0000 (Greenwich Mean Time)
+[debug] [2020-05-25T15:15:29.481Z] ----------------------------------------------------------------------
+[debug] [2020-05-25T15:15:29.481Z] 
+[debug] [2020-05-25T15:15:29.489Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-05-25T15:15:29.489Z] > authorizing via signed-in user
+[debug] [2020-05-25T15:15:29.489Z] [iam] checking project course-grader for permissions ["firebase.projects.get"]
+[debug] [2020-05-25T15:15:29.492Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/course-grader:testIamPermissions  
+ {"permissions":["firebase.projects.get"]}
+[debug] [2020-05-25T15:15:30.333Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Mon, 25 May 2020 15:15:31 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=558","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-05-25T15:15:30.334Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/course-grader  
+ 
+[debug] [2020-05-25T15:15:30.645Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Mon, 25 May 2020 15:15:32 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+[info] === Serving from 'C:\Users\Einar\Desktop\courseAdvisor'...
+[info] 
+[debug] [2020-05-25T15:15:30.652Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/course-grader/webApps/-/config  
+ 
+[debug] [2020-05-25T15:15:31.451Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Mon, 25 May 2020 15:15:32 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  hosting: Serving hosting files from: build
+[info] +  hosting: Local server: http://localhost:5000
+[warn] !  Your requested "node" version "8" doesn't match your global version "11"
+[info] +  functions: functions emulator started at http://localhost:5001
+[info] i  functions: Watching "C:\Users\Einar\Desktop\courseAdvisor\functions" for Cloud Functions...
+[debug] [2020-05-25T15:15:32.690Z] [worker-pool] addWorker(~diagnostic~) 
+[debug] [2020-05-25T15:15:32.690Z] [worker-pool] Adding worker with key ~diagnostic~, total=1 
+[debug] [2020-05-25T15:15:32.690Z] [worker-pool] submitWork(triggerId=) 
+[debug] [2020-05-25T15:15:32.690Z] [worker-~diagnostic~-9ede9dc9-b5e3-48af-b9b7-6945f1659458]: Assigning socketPath: \\?\pipe\C:\Users\Einar\Desktop\courseAdvisor\functions\15044 
+[debug] [2020-05-25T15:15:32.691Z] [worker-~diagnostic~-9ede9dc9-b5e3-48af-b9b7-6945f1659458]: BUSY 
+[debug] [2020-05-25T15:15:33.089Z] [runtime-status] [15044] Functions runtime initialized. {"cwd":"C:\\Users\\Einar\\Desktop\\courseAdvisor\\functions","node_version":"11.6.0"} 
+[debug] [2020-05-25T15:15:33.090Z] [runtime-status] [15044] Disabled runtime features: undefined 
+[warn] !  The Cloud Functions emulator requires the module "firebase-admin" to be installed. This package is in your package.json, but it's not available. You probably need to run "npm install" in your functions directory.
+[info] i  functions: Your functions could not be parsed due to an issue with your node_modules (see above)
+[debug] [2020-05-25T15:15:33.108Z] [worker-~diagnostic~-9ede9dc9-b5e3-48af-b9b7-6945f1659458]: exited 
+[debug] [2020-05-25T15:15:33.109Z] [worker-~diagnostic~-9ede9dc9-b5e3-48af-b9b7-6945f1659458]: FINISHED 
+[debug] [2020-05-25T15:16:48.886Z] ----------------------------------------------------------------------
+[debug] [2020-05-25T15:16:48.888Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Einar\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2020-05-25T15:16:48.888Z] CLI Version:   8.2.0
+[debug] [2020-05-25T15:16:48.888Z] Platform:      win32
+[debug] [2020-05-25T15:16:48.888Z] Node Version:  v11.6.0
+[debug] [2020-05-25T15:16:48.889Z] Time:          Mon May 25 2020 15:16:48 GMT+0000 (Greenwich Mean Time)
+[debug] [2020-05-25T15:16:48.889Z] ----------------------------------------------------------------------
+[debug] [2020-05-25T15:16:48.890Z] 
+[debug] [2020-05-25T15:16:48.897Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-05-25T15:16:48.897Z] > authorizing via signed-in user
+[debug] [2020-05-25T15:16:48.898Z] [iam] checking project course-grader for permissions ["firebase.projects.get"]
+[debug] [2020-05-25T15:16:48.900Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/course-grader:testIamPermissions  
+ {"permissions":["firebase.projects.get"]}
+[debug] [2020-05-25T15:16:49.672Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Mon, 25 May 2020 15:16:51 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=557","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-05-25T15:16:49.673Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/course-grader  
+ 
+[debug] [2020-05-25T15:16:49.993Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Mon, 25 May 2020 15:16:51 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+[info] === Serving from 'C:\Users\Einar\Desktop\courseAdvisor'...
+[info] 
+[debug] [2020-05-25T15:16:50.003Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/course-grader/webApps/-/config  
+ 
+[debug] [2020-05-25T15:16:50.716Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Mon, 25 May 2020 15:16:52 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  hosting: Serving hosting files from: build
+[info] +  hosting: Local server: http://localhost:5000
+[warn] !  Your requested "node" version "8" doesn't match your global version "11"
+[info] +  functions: functions emulator started at http://localhost:5001
+[info] i  functions: Watching "C:\Users\Einar\Desktop\courseAdvisor\functions" for Cloud Functions...
+[debug] [2020-05-25T15:16:52.032Z] [worker-pool] addWorker(~diagnostic~) 
+[debug] [2020-05-25T15:16:52.033Z] [worker-pool] Adding worker with key ~diagnostic~, total=1 
+[debug] [2020-05-25T15:16:52.033Z] [worker-pool] submitWork(triggerId=) 
+[debug] [2020-05-25T15:16:52.033Z] [worker-~diagnostic~-2690ad34-d93c-4e32-8f08-d12b411c99a6]: Assigning socketPath: \\?\pipe\C:\Users\Einar\Desktop\courseAdvisor\functions\12576 
+[debug] [2020-05-25T15:16:52.034Z] [worker-~diagnostic~-2690ad34-d93c-4e32-8f08-d12b411c99a6]: BUSY 
+[debug] [2020-05-25T15:16:52.440Z] [runtime-status] [12576] Functions runtime initialized. {"cwd":"C:\\Users\\Einar\\Desktop\\courseAdvisor\\functions","node_version":"11.6.0"} 
+[debug] [2020-05-25T15:16:52.441Z] [runtime-status] [12576] Disabled runtime features: undefined 
+[warn] !  The Cloud Functions emulator requires the module "firebase-admin" to be installed. This package is in your package.json, but it's not available. You probably need to run "npm install" in your functions directory.
+[info] i  functions: Your functions could not be parsed due to an issue with your node_modules (see above)
+[debug] [2020-05-25T15:16:52.465Z] [worker-~diagnostic~-2690ad34-d93c-4e32-8f08-d12b411c99a6]: exited 
+[debug] [2020-05-25T15:16:52.465Z] [worker-~diagnostic~-2690ad34-d93c-4e32-8f08-d12b411c99a6]: FINISHED 
+[debug] [2020-05-25T15:18:49.616Z] ----------------------------------------------------------------------
+[debug] [2020-05-25T15:18:49.618Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Einar\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2020-05-25T15:18:49.619Z] CLI Version:   8.2.0
+[debug] [2020-05-25T15:18:49.619Z] Platform:      win32
+[debug] [2020-05-25T15:18:49.619Z] Node Version:  v11.6.0
+[debug] [2020-05-25T15:18:49.620Z] Time:          Mon May 25 2020 15:18:49 GMT+0000 (Greenwich Mean Time)
+[debug] [2020-05-25T15:18:49.620Z] ----------------------------------------------------------------------
+[debug] [2020-05-25T15:18:49.620Z] 
+[debug] [2020-05-25T15:18:49.630Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-05-25T15:18:49.630Z] > authorizing via signed-in user
+[debug] [2020-05-25T15:18:49.631Z] [iam] checking project course-grader for permissions ["firebase.projects.get"]
+[debug] [2020-05-25T15:18:49.634Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/course-grader:testIamPermissions  
+ {"permissions":["firebase.projects.get"]}
+[debug] [2020-05-25T15:18:50.407Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Mon, 25 May 2020 15:18:51 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=554","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-05-25T15:18:50.408Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/course-grader  
+ 
+[debug] [2020-05-25T15:18:50.745Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Mon, 25 May 2020 15:18:52 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+[info] === Serving from 'C:\Users\Einar\Desktop\courseAdvisor'...
+[info] 
+[debug] [2020-05-25T15:18:50.756Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/course-grader/webApps/-/config  
+ 
+[debug] [2020-05-25T15:18:51.463Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Mon, 25 May 2020 15:18:52 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  hosting: Serving hosting files from: build
+[info] +  hosting: Local server: http://localhost:5000
+[warn] !  Your requested "node" version "8" doesn't match your global version "11"
+[info] +  functions: functions emulator started at http://localhost:5001
+[info] i  functions: Watching "C:\Users\Einar\Desktop\courseAdvisor\functions" for Cloud Functions...
+[debug] [2020-05-25T15:18:52.795Z] [worker-pool] addWorker(~diagnostic~) 
+[debug] [2020-05-25T15:18:52.795Z] [worker-pool] Adding worker with key ~diagnostic~, total=1 
+[debug] [2020-05-25T15:18:52.795Z] [worker-pool] submitWork(triggerId=) 
+[debug] [2020-05-25T15:18:52.796Z] [worker-~diagnostic~-8f1ba47e-d889-4940-9e47-e518c24f0bb8]: Assigning socketPath: \\?\pipe\C:\Users\Einar\Desktop\courseAdvisor\functions\14632 
+[debug] [2020-05-25T15:18:52.796Z] [worker-~diagnostic~-8f1ba47e-d889-4940-9e47-e518c24f0bb8]: BUSY 
+[debug] [2020-05-25T15:18:53.300Z] [runtime-status] [14632] Functions runtime initialized. {"cwd":"C:\\Users\\Einar\\Desktop\\courseAdvisor\\functions","node_version":"11.6.0"} 
+[debug] [2020-05-25T15:18:53.301Z] [runtime-status] [14632] Disabled runtime features: undefined 
+[debug] [2020-05-25T15:18:53.305Z] [runtime-status] [14632] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.12.1","resolution":"C:\\Users\\Einar\\Desktop\\courseAdvisor\\node_modules\\firebase-admin\\lib\\index.js"} 
+[warn] !  The Cloud Functions emulator requires the module "firebase-functions" to be installed. This package is in your package.json, but it's not available. You probably need to run "npm install" in your functions directory.
+[info] i  functions: Your functions could not be parsed due to an issue with your node_modules (see above)
+[debug] [2020-05-25T15:18:53.330Z] [worker-~diagnostic~-8f1ba47e-d889-4940-9e47-e518c24f0bb8]: exited 
+[debug] [2020-05-25T15:18:53.330Z] [worker-~diagnostic~-8f1ba47e-d889-4940-9e47-e518c24f0bb8]: FINISHED 
+[debug] [2020-05-25T15:20:18.490Z] ----------------------------------------------------------------------
+[debug] [2020-05-25T15:20:18.493Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Einar\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2020-05-25T15:20:18.494Z] CLI Version:   8.2.0
+[debug] [2020-05-25T15:20:18.494Z] Platform:      win32
+[debug] [2020-05-25T15:20:18.494Z] Node Version:  v11.6.0
+[debug] [2020-05-25T15:20:18.496Z] Time:          Mon May 25 2020 15:20:18 GMT+0000 (Greenwich Mean Time)
+[debug] [2020-05-25T15:20:18.496Z] ----------------------------------------------------------------------
+[debug] [2020-05-25T15:20:18.496Z] 
+[debug] [2020-05-25T15:20:18.508Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-05-25T15:20:18.508Z] > authorizing via signed-in user
+[debug] [2020-05-25T15:20:18.509Z] [iam] checking project course-grader for permissions ["firebase.projects.get"]
+[debug] [2020-05-25T15:20:18.513Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/course-grader:testIamPermissions  
+ {"permissions":["firebase.projects.get"]}
+[debug] [2020-05-25T15:20:18.865Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Mon, 25 May 2020 15:20:20 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=126","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-05-25T15:20:18.867Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/course-grader  
+ 
+[debug] [2020-05-25T15:20:19.232Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Mon, 25 May 2020 15:20:20 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+[info] === Serving from 'C:\Users\Einar\Desktop\courseAdvisor'...
+[info] 
+[debug] [2020-05-25T15:20:19.245Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/course-grader/webApps/-/config  
+ 
+[debug] [2020-05-25T15:20:19.958Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Mon, 25 May 2020 15:20:21 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  hosting: Serving hosting files from: build
+[info] +  hosting: Local server: http://localhost:5000
+[warn] !  Your requested "node" version "8" doesn't match your global version "11"
+[info] +  functions: functions emulator started at http://localhost:5001
+[info] i  functions: Watching "C:\Users\Einar\Desktop\courseAdvisor\functions" for Cloud Functions...
+[debug] [2020-05-25T15:20:21.272Z] [worker-pool] addWorker(~diagnostic~) 
+[debug] [2020-05-25T15:20:21.273Z] [worker-pool] Adding worker with key ~diagnostic~, total=1 
+[debug] [2020-05-25T15:20:21.273Z] [worker-pool] submitWork(triggerId=) 
+[debug] [2020-05-25T15:20:21.274Z] [worker-~diagnostic~-9a3e62e3-432f-4a00-a037-68b65b0868a0]: Assigning socketPath: \\?\pipe\C:\Users\Einar\Desktop\courseAdvisor\functions\1420 
+[debug] [2020-05-25T15:20:21.274Z] [worker-~diagnostic~-9a3e62e3-432f-4a00-a037-68b65b0868a0]: BUSY 
+[debug] [2020-05-25T15:20:21.723Z] [runtime-status] [1420] Functions runtime initialized. {"cwd":"C:\\Users\\Einar\\Desktop\\courseAdvisor\\functions","node_version":"11.6.0"} 
+[debug] [2020-05-25T15:20:21.724Z] [runtime-status] [1420] Disabled runtime features: undefined 
+[debug] [2020-05-25T15:20:21.727Z] [runtime-status] [1420] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.12.1","resolution":"C:\\Users\\Einar\\Desktop\\courseAdvisor\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-05-25T15:20:21.729Z] [runtime-status] [1420] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.1","resolution":"C:\\Users\\Einar\\Desktop\\courseAdvisor\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-05-25T15:20:21.733Z] [runtime-status] [1420] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] 
+[debug] [2020-05-25T15:20:21.779Z] [runtime-status] [1420] Checked functions.config() {"config":{}} 
+[debug] [2020-05-25T15:20:21.780Z] [runtime-status] [1420] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.1","resolution":"C:\\Users\\Einar\\Desktop\\courseAdvisor\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-05-25T15:20:21.781Z] [runtime-status] [1420] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.12.1","resolution":"C:\\Users\\Einar\\Desktop\\courseAdvisor\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-05-25T15:20:21.781Z] [runtime-status] [1420] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.1","resolution":"C:\\Users\\Einar\\Desktop\\courseAdvisor\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-05-25T15:20:21.781Z] [runtime-status] [1420] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.12.1","resolution":"C:\\Users\\Einar\\Desktop\\courseAdvisor\\node_modules\\firebase-admin\\lib\\index.js"}} 
+[warn] !  Error: Cannot find module 'C:\Users\Einar\Desktop\courseAdvisor\functions'
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:603:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:529:25)
+    at Module.require (internal/modules/cjs/loader.js:657:17)
+    at require (internal/modules/cjs/helpers.js:22:18)
+    at C:\Users\Einar\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:661:33
+    at Generator.next (<anonymous>)
+    at fulfilled (C:\Users\Einar\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:5:58)
+    at process.internalTickCallback (internal/process/next_tick.js:77:7)
+[warn] !  We were unable to load your functions code. (see above)
+   - It appears your code is written in Typescript, which must be compiled before emulation.
+   - You may be able to run "npm run build" in your functions directory to resolve this.
+[debug] [2020-05-25T15:20:21.806Z] [worker-~diagnostic~-9a3e62e3-432f-4a00-a037-68b65b0868a0]: exited 
+[debug] [2020-05-25T15:20:21.807Z] [worker-~diagnostic~-9a3e62e3-432f-4a00-a037-68b65b0868a0]: FINISHED 
+[debug] [2020-05-25T15:33:21.567Z] ----------------------------------------------------------------------
+[debug] [2020-05-25T15:33:21.569Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Einar\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2020-05-25T15:33:21.570Z] CLI Version:   8.2.0
+[debug] [2020-05-25T15:33:21.570Z] Platform:      win32
+[debug] [2020-05-25T15:33:21.570Z] Node Version:  v11.6.0
+[debug] [2020-05-25T15:33:21.571Z] Time:          Mon May 25 2020 15:33:21 GMT+0000 (Greenwich Mean Time)
+[debug] [2020-05-25T15:33:21.571Z] ----------------------------------------------------------------------
+[debug] [2020-05-25T15:33:21.571Z] 
+[debug] [2020-05-25T15:33:21.578Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-05-25T15:33:21.579Z] > authorizing via signed-in user
+[debug] [2020-05-25T15:33:21.579Z] [iam] checking project course-grader for permissions ["firebase.projects.get"]
+[debug] [2020-05-25T15:33:21.582Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/course-grader:testIamPermissions  
+ {"permissions":["firebase.projects.get"]}
+[debug] [2020-05-25T15:33:22.409Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Mon, 25 May 2020 15:33:23 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=555","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-05-25T15:33:22.411Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/course-grader  
+ 
+[debug] [2020-05-25T15:33:22.796Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Mon, 25 May 2020 15:33:24 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+[info] === Serving from 'C:\Users\Einar\Desktop\courseAdvisor'...
+[info] 
+[debug] [2020-05-25T15:33:22.806Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/course-grader/webApps/-/config  
+ 
+[debug] [2020-05-25T15:33:23.493Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Mon, 25 May 2020 15:33:24 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  hosting: Serving hosting files from: build
+[info] +  hosting: Local server: http://localhost:5000
+[warn] !  Your requested "node" version "8" doesn't match your global version "11"
+[info] +  functions: functions emulator started at http://localhost:5001
+[info] i  functions: Watching "C:\Users\Einar\Desktop\courseAdvisor\functions" for Cloud Functions...
+[debug] [2020-05-25T15:33:24.848Z] [worker-pool] addWorker(~diagnostic~) 
+[debug] [2020-05-25T15:33:24.848Z] [worker-pool] Adding worker with key ~diagnostic~, total=1 
+[debug] [2020-05-25T15:33:24.848Z] [worker-pool] submitWork(triggerId=) 
+[debug] [2020-05-25T15:33:24.849Z] [worker-~diagnostic~-4e0d15b9-3117-46a9-9213-a36d419b10c4]: Assigning socketPath: \\?\pipe\C:\Users\Einar\Desktop\courseAdvisor\functions\6312 
+[debug] [2020-05-25T15:33:24.849Z] [worker-~diagnostic~-4e0d15b9-3117-46a9-9213-a36d419b10c4]: BUSY 
+[debug] [2020-05-25T15:33:25.237Z] [runtime-status] [6312] Functions runtime initialized. {"cwd":"C:\\Users\\Einar\\Desktop\\courseAdvisor\\functions","node_version":"11.6.0"} 
+[debug] [2020-05-25T15:33:25.238Z] [runtime-status] [6312] Disabled runtime features: undefined 
+[debug] [2020-05-25T15:33:25.241Z] [runtime-status] [6312] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.12.1","resolution":"C:\\Users\\Einar\\Desktop\\courseAdvisor\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-05-25T15:33:25.242Z] [runtime-status] [6312] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.1","resolution":"C:\\Users\\Einar\\Desktop\\courseAdvisor\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-05-25T15:33:25.245Z] [runtime-status] [6312] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] 
+[debug] [2020-05-25T15:33:25.283Z] [runtime-status] [6312] Checked functions.config() {"config":{}} 
+[debug] [2020-05-25T15:33:25.284Z] [runtime-status] [6312] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.1","resolution":"C:\\Users\\Einar\\Desktop\\courseAdvisor\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-05-25T15:33:25.284Z] [runtime-status] [6312] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.12.1","resolution":"C:\\Users\\Einar\\Desktop\\courseAdvisor\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-05-25T15:33:25.285Z] [runtime-status] [6312] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.1","resolution":"C:\\Users\\Einar\\Desktop\\courseAdvisor\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-05-25T15:33:25.285Z] [runtime-status] [6312] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.12.1","resolution":"C:\\Users\\Einar\\Desktop\\courseAdvisor\\node_modules\\firebase-admin\\lib\\index.js"}} 
+[warn] !  Error: Cannot find module 'C:\Users\Einar\Desktop\courseAdvisor\functions'
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:603:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:529:25)
+    at Module.require (internal/modules/cjs/loader.js:657:17)
+    at require (internal/modules/cjs/helpers.js:22:18)
+    at C:\Users\Einar\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:661:33
+    at Generator.next (<anonymous>)
+    at fulfilled (C:\Users\Einar\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:5:58)
+    at process.internalTickCallback (internal/process/next_tick.js:77:7)
+[warn] !  We were unable to load your functions code. (see above)
+   - It appears your code is written in Typescript, which must be compiled before emulation.
+   - You may be able to run "npm run build" in your functions directory to resolve this.
+[debug] [2020-05-25T15:33:25.312Z] [worker-~diagnostic~-4e0d15b9-3117-46a9-9213-a36d419b10c4]: exited 
+[debug] [2020-05-25T15:33:25.313Z] [worker-~diagnostic~-4e0d15b9-3117-46a9-9213-a36d419b10c4]: FINISHED 

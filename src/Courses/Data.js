@@ -39,7 +39,7 @@ export const getFilteredCourses = (filters) => {
   if (filters.semester !== 'Any') {
     query = query.where('semester', '==', filters.semester);
   }
-
+/*
   if (filters.category !== 'Any') {
     query = query.where('semester', '==', filters.category);
   }
@@ -47,7 +47,7 @@ export const getFilteredCourses = (filters) => {
   if (filters.price !== 'Any') {
     query = query.where('semester', '==', filters.price.length);
   }
-
+*/
   if (filters.sort === 'Rating') {
     query = query.orderBy('avgRating', 'desc');
   } else if (filters.sort === 'Reviews') {
@@ -111,7 +111,6 @@ export const addRatingPracticality = (courseID, ratingPractical) => {
     });
   });
 }
- */
 
 
 
@@ -137,7 +136,7 @@ export const addRatingLoad = (courseID, rating) => {
   });
 }
 
-
+*/
 
 
 

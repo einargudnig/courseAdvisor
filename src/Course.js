@@ -4,6 +4,8 @@ import Grid from '@material-ui/core/Grid';
 import Icon from '@material-ui/core/Icon';
 import Button from '@material-ui/core/Button';
 import Modal from './Modal';
+import Link from '@material-ui/core/Link';
+import OpenInNewIcon from '@material-ui/icons/OpenInNew';
 import { yellow } from '@material-ui/core/colors';
 
 import { withStyles } from '@material-ui/core/styles';
@@ -11,7 +13,7 @@ import { withStyles } from '@material-ui/core/styles';
 import * as firebase from "firebase/app";
 import "firebase/auth";
 
-import * as Data from './FriendlyEats/Data';
+import * as Data from './Courses/Data';
 //import * as FriendlyEatsMock from './FriendlyEats/FriendlyEats.Mock';
 
 const styles = theme => ({
@@ -34,7 +36,7 @@ const styles = theme => ({
   courseHeader: {
     color: "black",
     fontSize: "22px",
-    fontWeight: "bold",
+    //fontWeight: "bold",
   },
   ErrorText: {
     color: "#000",
@@ -111,7 +113,7 @@ function Course(props) {
   const [ratings, setRatings] = useState([]);
   const [modalOpen, setModalOpen ] = useState(false);
 
-  const [ratingLoad, setRatingLoad] = useState(5);
+  // const [ratingLoad, setRatingLoad] = useState(5);
   const [rating, setRating] = useState(5);
   const [comment, setComment] = useState("");
   const id = props.match.params.id;
@@ -228,8 +230,12 @@ function Course(props) {
           <h2 style={{margin: "5px"}}>{course.name}</h2>
           <div className={classes.avgStar}>{renderRating(course.avgRating)}</div>
           
-          {course.semester} <br/>
-          <div className={classes.avgStar}>{renderRating(course.avgRatingLoad)}</div>
+          <b>{course.semester}</b> <br/>
+
+          <Link href={course.url} target="_blank" rel="noopener" color="inherit">
+            More information <OpenInNewIcon fontSize="small"/>
+          </Link><br/>
+          {/*<div className={classes.avgStar}>{renderRating(course.avgRatingLoad)}</div> */}
           <Icon className={classes.iconHover} onClick={toggle}>
             add_circle
           </Icon>
@@ -263,7 +269,7 @@ function Course(props) {
                   <div style={{marginBottom: "8px"}}>
                   <span style={{color: "#999"}}>{rating.userName}</span>
                   <span className={classes.ratingStar}>{renderRating(rating.rating)}</span>
-                  <span className={classes.ratingStar}>{renderRating(rating.ratingLoad)}</span>
+                  {/*<span className={classes.ratingStar}>{renderRating(rating.ratingLoad)}</span>*/}
                   </div>
                   {rating.text}</Grid>
                   <Grid item xs={3}/ >
