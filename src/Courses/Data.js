@@ -80,7 +80,7 @@ export const addRating = (courseID, rating) => {
             (data.numRating + 1);
 
       transaction.update(document, {
-        numRatings: data.numRating + 1,
+        numRating: data.numRating + 1,
         avgRating: newAverage
       });
       return transaction.set(newRatingDocument, rating);

@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import Header from './Header';
 import Grid from '@material-ui/core/Grid';
 import Icon from '@material-ui/core/Icon';
 import Button from '@material-ui/core/Button';
-import Modal from './Modal';
+import Modal from '../Modal/Modal';
 import Link from '@material-ui/core/Link';
 import OpenInNewIcon from '@material-ui/icons/OpenInNew';
 import { yellow } from '@material-ui/core/colors';
@@ -13,7 +12,7 @@ import { withStyles } from '@material-ui/core/styles';
 import * as firebase from "firebase/app";
 import "firebase/auth";
 
-import * as Data from './Courses/Data';
+import * as Data from '../../Courses/Data';
 //import * as FriendlyEatsMock from './FriendlyEats/FriendlyEats.Mock';
 
 const styles = theme => ({
@@ -221,7 +220,6 @@ function Course(props) {
 
 
   return <React.Fragment>
-    <Header />
       <Grid container justify="center" alignItems="center" direction="column" className={classes.courseHeader} style={myStyle}>
       {course.name ?
         (<React.Fragment>

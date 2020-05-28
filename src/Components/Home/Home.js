@@ -6,12 +6,13 @@ import Grid from '@material-ui/core/Grid';
 import Icon from '@material-ui/core/Icon';
 import Button from '@material-ui/core/Button';
 import CircularProgress from '@material-ui/core/CircularProgress';
-import Header from './Header';
-import config from './config';
+// import Header from './Header';
+import AboutIndex from '../About/AboutIndex';
+import config from '../../config';
 
-import * as Data from './Courses/Data';
+import * as Data from '../../Courses/Data';
 // import * as FriendlyEatsMock from './FriendlyEats/FriendlyEats.Mock';
-import * as Search from './Courses/Search';
+import * as Search from '../../Courses/Search';
 
 const styles = theme => ({
   root: {
@@ -172,8 +173,8 @@ function Home(props) {
 
   return (
     <React.Fragment>
-      <Header />
       <Grid container justify="center" direction="row" className={classes.root}>
+      <AboutIndex />
       <Grid item xs={2}>
       </Grid>
       {/*<Grid item xs={2}>
@@ -189,7 +190,7 @@ function Home(props) {
       <Select options={sortOrderOptions} value={sort} onChange={handleChange} placeholder="Order"/>
       </Grid>*/}
       <Grid item xs={3}>
-      <Button onClick={submitButton} color="primary" className={classes.button} >Search</Button>
+      <Button onClick={submitButton} color="primary" className={classes.button} >Sort</Button>
       </Grid>
       <Grid item xs={1}>
       </Grid>

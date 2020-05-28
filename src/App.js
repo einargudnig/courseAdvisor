@@ -2,15 +2,19 @@ import React, { useState, useEffect } from 'react';
 import { Route, BrowserRouter as Router } from 'react-router-dom';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
+// import { useTheme } from '@material-ui/core/styles';
 import theme from './theme';
-import Home from './Home';
-import About from './About';
-import ErrorModal from './ErrorModal';
-import Course from './Course';
+import Header from './Components/Header/Header';
+import Home from './Components/Home/Home';
+import About from './Components/About/About';
+import ErrorModal from './Components/Error/ErrorModal';
+import Course from './Components/Course/Course';
 import * as firebase from "firebase/app";
 import "firebase/firestore";
 import "firebase/auth";
 import config from './config';
+
+// import { Switch, FormControlLabel } from '@material-ui/core';
 
 try {
   firebase.initializeApp(config);
@@ -18,9 +22,18 @@ try {
   // console.log(firebase init error)
 }
 
+/*
+Gera styles css skra, sem yfirskrifar material theme?
+breytir i dark mode?
+*/
+
+
+
 function App() {
+  // const theme = useTheme();
   const [errorModalOpen, setErrorModalOpen ] = useState(false);
   const [errorType, setErrorType ] = useState("");
+
   
   useEffect(()=>{
     const init = async () => {
@@ -46,10 +59,12 @@ function App() {
     setErrorModalOpen(!errorModalOpen);
   };
 
+
   return (
     <MuiThemeProvider theme={theme}>
       <CssBaseline />
       <Router>
+        <Header/>
         <Route exact path="/" render={(props) => <Home {...props} errorToggle={errorToggle} setErrorType={setErrorType} setErrorModalOpen={setErrorModalOpen} />} />
         <Route exact path="/courses/:id" render={(props) => <Course {...props} errorToggle={errorToggle} />} />
         <Route exact path="/about" render={(props) => <About {...props} />} />
