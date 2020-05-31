@@ -8,7 +8,7 @@ const Loader = () => {
     const green = useRef(null);
 
     useEffect(() => {
-        /*
+        
         TweenMax.fromTo(
             [blue.current, yellow.current],
             0.5,
@@ -20,7 +20,7 @@ const Loader = () => {
             0.5,
             { y: -18 },
             { y: 18, repeat: -1, yoyo: true}
-        );*/
+        );
     }, [])
 
     return(

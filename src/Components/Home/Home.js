@@ -5,7 +5,8 @@ import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Icon from '@material-ui/core/Icon';
 import Button from '@material-ui/core/Button';
-import CircularProgress from '@material-ui/core/CircularProgress';
+// import CircularProgress from '@material-ui/core/CircularProgress';
+import Loader from '../Loader/Loader';
 // import Header from './Header';
 import AboutIndex from '../About/AboutIndex';
 import config from '../../config';
@@ -209,7 +210,8 @@ function Home(props) {
           :
           <div className={classes.guyContainer}>
             {/*<img className={classes.guy} src="/img/guy_fireats.png" alt="guy fireats" />*/}
-            <CircularProgress />
+            {/*<CircularProgress />*/}
+            <Loader />
             <div className="text">
               This app is connected to the Firebase project "<b>{config.projectId}</b>".<br />
               <br />
