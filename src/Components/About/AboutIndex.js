@@ -12,8 +12,8 @@ const styles = theme => ({
 })
 
 
-function AboutIndex(props) {
-    const { classes } = props;
+function AboutIndex(styles, props) {
+    const { classes } = styles;
 
     return(
         <React.Fragment>
@@ -25,7 +25,7 @@ function AboutIndex(props) {
                     Please take a look at the about page under the menu to get more details.
                     <br />
                     <br />
-                    You can sort the courses by semesters: Autumn or Spring, by selecting either in the drop-down selection and clicking the sort button.
+                    You can sort the courses by semesters: <i>Autumn</i> or <i>Spring</i>, by selecting either in the drop-down selection and clicking the sort button.
                 </Typography>
             </Grid>
         </React.Fragment>

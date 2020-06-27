@@ -201,7 +201,7 @@ function Home(props) {
                     <div style={{marginLeft: "auto", marginRight: "auto", marginBottom: "20px", width: "80%"}}>
                     {/*<img src={course.photo} alt={course.name} style={{width: "100%", objectFit: "cover"}}/> <br/>*/}
                     <span style={{ position: 'relative', float: 'right'}}>{getPrice(course.price)}</span>
-                    <h2 style={{ marginTop: '2px', marginBottom: '5px'}}>{course.name}</h2>
+                    <h3 style={{ marginTop: '2px', marginBottom: '5px', wordBreak: 'break-word'}}>{course.name}</h3>
                     {getStar(course.avgRating).map((star) => (<Icon style={{color: '#feb22c'}} key={star.id}>{star.value}</Icon>) )}<br/>
                     {course.semester}
                     </div>

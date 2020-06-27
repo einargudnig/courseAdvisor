@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Route, BrowserRouter as Router } from 'react-router-dom';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
+// import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
+import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
 // import { useTheme } from '@material-ui/core/styles';
 import theme from './theme';
 import Header from './Components/Header/Header';
@@ -25,6 +26,21 @@ try {
 /*
 Gera styles css skra, sem yfirskrifar material theme?
 breytir i dark mode?
+
+TODO:::
+
+Föstudagur:
+tRansitions/Animations
+- Láta /urls hafa transitions
+- Accept takki með animations?
+- info um review
+
+Laugardagur/Sunnudagur
+Mobile-View !important
+Heroku.
+
+
+
 */
 
 

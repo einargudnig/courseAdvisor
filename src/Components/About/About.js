@@ -9,6 +9,7 @@ import Grid from '@material-ui/core/Grid';
 // import Loader from '../Loader/Loader'
 import { Link } from 'react-router-dom';
 
+
 const styles = theme => ({
   root: {
     flexGrow: 1,
@@ -21,12 +22,26 @@ const styles = theme => ({
   },
 });
 
+const startState = { autoAlpha: 0, y: -50 };
 
+const About = (styles, props) => {
+  const { classes } = styles;
 
-const About = props => {
-  const { classes } = props;
 
   return (
+    /* <Transition
+    unmountOnExit
+    in={props.show}
+    timeout={1000}
+    onEnter={node => TweenMax.set(node, startState)}
+    addEndListener={ (node, done) => {
+      TweenMax.to(node, 0.5, {
+        autoAlpha: props.show ? 1 : 0,
+        y: props.show ? 0 : 50,
+        onComplete: done
+      });
+    }}
+  > */
     <React.Fragment>
       <Grid container justify="center" alignItems="center" direction="row" className={classes.root}>
           <Grid className={classes.caption}>
@@ -36,7 +51,7 @@ const About = props => {
             <br/>
             <b>CourseAdvisor</b> can help you to make a decision on what courses you decide to choose.<br />
             Right now this does only apply for non mandatory courses in Computer Science at the University of Iceland.<br />
-            You can find more information on these courses on the <Link href="https://ugla.hi.is/kennsluskra/index.php?tab=nam&chapter=namsleid&id=080713_20206&kennsluar=2020" className="underline" color="inherit">University website</Link> <br />
+            You can find more information on these courses on the <a href="https://ugla.hi.is/kennsluskra/index.php?tab=nam&chapter=namsleid&id=080713_20206&kennsluar=2020" className="underline" color="inherit">University website</a> <br />
             Most of us who are or have completed studying Computer Science know that you have to choose between a lot of<br /> 
             non mandatory classes to fill in with the mandatory classes. This can be a tricky selection because there are a lot of courses to choose from. 
             <br />
@@ -61,10 +76,16 @@ const About = props => {
             <br />
             <small>If you do have any questions, ideas on how to make this better or anything else. Don't hesitate to send me an email: einargudnig@gmail.com</small>
           </Typography>
+
+          <a href="www.einargudni.com" class="underline">
+            <span>Link here</span><svg viewBox="0 0 13 20"><polyline points="0.5 19.5 3 19.5 12.5 10 3 0.5" /></svg>
+          </a>
+
           </Grid>
       </Grid>
       
     </React.Fragment>
+    /* </Transition> */
   );
 }
 

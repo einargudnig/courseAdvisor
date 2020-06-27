@@ -5,7 +5,14 @@ import Button from '@material-ui/core/Button';
 import Modal from '../Modal/Modal';
 import Link from '@material-ui/core/Link';
 import OpenInNewIcon from '@material-ui/icons/OpenInNew';
+import InfoIcon from '@material-ui/icons/Info';
 import { yellow } from '@material-ui/core/colors';
+
+//import { CSSTransition } from 'react-transition-group';
+// import { Slide } from '@material-ui/core';
+import Tooltip from '@material-ui/core/Tooltip';
+import Zoom from '@material-ui/core/Zoom';
+import Fade from '@material-ui/core/Fade';
 
 import { withStyles } from '@material-ui/core/styles';
 
@@ -110,7 +117,7 @@ function Course(props) {
 
   const [course, setCourse] = useState({});
   const [ratings, setRatings] = useState([]);
-  const [modalOpen, setModalOpen ] = useState(false);
+  const [modalOpen, setModalOpen ] = React.useState(false);
 
   // const [ratingLoad, setRatingLoad] = useState(5);
   const [rating, setRating] = useState(5);
@@ -120,6 +127,7 @@ function Course(props) {
   const toggle = () => {
     setModalOpen(!modalOpen);
   };
+
   useEffect(() => {
     (async () => {
       const course = await Data.getCourse(id);
@@ -234,9 +242,11 @@ function Course(props) {
             More information <OpenInNewIcon fontSize="small"/>
           </Link><br/>
           {/*<div className={classes.avgStar}>{renderRating(course.avgRatingLoad)}</div> */}
-          <Icon className={classes.iconHover} onClick={toggle}>
-            add_circle
-          </Icon>
+          <Tooltip title="Add Rating">
+            <Icon className={classes.iconHover} onClick={toggle}>
+              add_circle
+            </Icon>
+          </Tooltip>
         </Grid>
         <Grid item xs={3}/ >
         </React.Fragment>) :
@@ -275,25 +285,35 @@ function Course(props) {
         })
         }
   </Grid>
-    <Modal modalOpen={modalOpen} toggle={toggle}>
-    <div className={classes.modalWindowHead}>
-      <span className={classes.modalWindowHeadText}>Add a Review</span>
-    </div>
-    <div className={classes.modalWindowContent}>
-      <div className={classes.modalWindowContentStar}>
-        {randerRatingInput()}
+
+  <Fade in={modalOpen}>
+    <Modal 
+      modalOpen={modalOpen} 
+      toggle={toggle}
+      >
+      <div className={classes.modalWindowHead}>
+        <span className={classes.modalWindowHeadText}>Add a Review  </span>
       </div>
-      <div>
-        <textarea className={classes.modalWindowContentTextarea} onChange={(e) => {setComment(e.target.value);}}></textarea>
+      <div className={classes.modalWindowContent}>
+        
+          <span> Here you can give this course a rating from one to five. </span>
+          <span> It is recommended that your review is well informing for other: </span>
+          <span> The review is informing if it, for example to emphasize the practicality of the course content,  </span>
+        <div className={classes.modalWindowContentStar}>
+          {randerRatingInput()}
+        </div>
+        <div>
+          <textarea className={classes.modalWindowContentTextarea} onChange={(e) => {setComment(e.target.value);}}></textarea>
+        </div>
       </div>
-    </div>
-    <div className={classes.modalWindowFooter}>
-      <span className={classes.modalWindowFooterText}>
-        <Button color="primary" onClick={toggle}>CANCEL</Button>
-        <Button color="primary" onClick={(e ) => { saveRating()}}>SAVE</Button>
-      </span>
-    </div>
-  </Modal>
+      <div className={classes.modalWindowFooter}>
+        <span className={classes.modalWindowFooterText}>
+          <Button color="primary" onClick={toggle}>CANCEL</Button>
+          <Button color="primary" onClick={(e ) => { saveRating()}}>SAVE</Button>
+        </span>
+      </div>
+    </Modal>
+    </Fade>
   </React.Fragment>
 }
 
