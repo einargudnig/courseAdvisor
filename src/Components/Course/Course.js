@@ -296,9 +296,12 @@ function Course(props) {
       </div>
       <div className={classes.modalWindowContent}>
         
-          <span> Here you can give this course a rating from one to five. </span>
-          <span> It is recommended that your review is well informing for other: </span>
-          <span> The review is informing if it, for example to emphasize the practicality of the course content,  </span>
+          <span> Here you can give this course a rating from one to five. </span> <br />
+          <span> It is recommended that if you write a review it is well informing for other students. </span> <br />
+          <span> The review can be informing if it, for example: </span> <br />
+          <span>  - touches on practicality of the course content,  </span> <br />
+          <span>  - difficulty of the course contents, projects and/or exams,  </span> <br />
+          <span>  - amount of homework/projects.  </span> 
         <div className={classes.modalWindowContentStar}>
           {randerRatingInput()}
         </div>
