@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Transition } from 'react-transition-group';
-import { TweenMax } from 'gsap/all';
+// import { Transition } from 'react-transition-group';
+// import { TweenMax } from 'gsap/all';
 import { withStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 // import Link from '@material-ui/core/Link';
 import Grid from '@material-ui/core/Grid';
 // import Loader from '../Loader/Loader'
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 
 const styles = theme => ({
@@ -22,7 +22,7 @@ const styles = theme => ({
   },
 });
 
-const startState = { autoAlpha: 0, y: -50 };
+// const startState = { autoAlpha: 0, y: -50 };
 
 const About = (styles, props) => {
   const { classes } = styles;
@@ -76,10 +76,6 @@ const About = (styles, props) => {
             <br />
             <small>If you do have any questions, ideas on how to make this better or anything else. Don't hesitate to send me an email: einargudnig@gmail.com</small>
           </Typography>
-
-          <a href="www.einargudni.com" class="underline">
-            <span>Link here</span><svg viewBox="0 0 13 20"><polyline points="0.5 19.5 3 19.5 12.5 10 3 0.5" /></svg>
-          </a>
 
           </Grid>
       </Grid>

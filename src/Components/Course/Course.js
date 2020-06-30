@@ -5,13 +5,13 @@ import Button from '@material-ui/core/Button';
 import Modal from '../Modal/Modal';
 import Link from '@material-ui/core/Link';
 import OpenInNewIcon from '@material-ui/icons/OpenInNew';
-import InfoIcon from '@material-ui/icons/Info';
+// import InfoIcon from '@material-ui/icons/Info';
 import { yellow } from '@material-ui/core/colors';
 
 //import { CSSTransition } from 'react-transition-group';
 // import { Slide } from '@material-ui/core';
 import Tooltip from '@material-ui/core/Tooltip';
-import Zoom from '@material-ui/core/Zoom';
+// import Zoom from '@material-ui/core/Zoom';
 import Fade from '@material-ui/core/Fade';
 
 import { withStyles } from '@material-ui/core/styles';
