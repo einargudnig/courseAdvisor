@@ -241,6 +241,7 @@ function Course(props) {
           <Link href={course.url} target="_blank" rel="noopener" color="inherit">
             More information <OpenInNewIcon fontSize="small"/>
           </Link><br/>
+          <small> Number of ratings: {course.numRating}</small>
           {/*<div className={classes.avgStar}>{renderRating(course.avgRatingLoad)}</div> */}
           <Tooltip title="Add Rating">
             <Icon className={classes.iconHover} onClick={toggle}>
@@ -301,7 +302,8 @@ function Course(props) {
           <span> The review can be informing if it, for example: </span> <br />
           <span>  - touches on practicality of the course content,  </span> <br />
           <span>  - difficulty of the course contents, projects and/or exams,  </span> <br />
-          <span>  - amount of homework/projects.  </span> 
+          <span>  - amount of homework/projects.  </span> <br />
+          <span> Note that the reviews are anonymous. </span>
         <div className={classes.modalWindowContentStar}>
           {randerRatingInput()}
         </div>

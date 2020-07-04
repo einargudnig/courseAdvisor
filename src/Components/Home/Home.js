@@ -13,7 +13,6 @@ import config from '../../config';
 
 import * as Data from '../../Courses/Data';
 // import * as FriendlyEatsMock from './FriendlyEats/FriendlyEats.Mock';
-import * as Search from '../../Courses/Search';
 
 const styles = theme => ({
   root: {
@@ -26,6 +25,7 @@ const styles = theme => ({
   guyContainer: {
     paddingTop: "100px",
     textAlign: "center",
+    alignItems: 'center'
   },
   guy: {
     maxWidth: "200px",
@@ -122,19 +122,22 @@ function Home(props) {
     }
     return ret;
   };
+
+  /*
   const getPrice = (price) => {
     const ret = [];
     for (let r = 0; r < price; r += 1) {
       ret.push("$");
     }
     return ret;
-  }
+  }*/
+
   const semesterOptions = ['Autumn', 'Spring'].map((name) => {
     return {value: name, label: name, type: "semester" }
   })
   // semesterOptions.unshift({value: "Any", label: "semester", type: "semester" });
 
-  
+  /*
   const categoryOptions = Search.data.category.map((name) => {
     return {value: name, label: name, type: 'city' }
   }); 
@@ -145,7 +148,6 @@ function Home(props) {
   });
   priceOptions.unshift({value: "Any", label: "全て", type: "price" });
 
-  /*
   const sortOrderOptions = ['Rating', 'Reviews'].map((name) => {
     return {value: name, label: name, type: "sort" }
   }); */
@@ -200,7 +202,7 @@ function Home(props) {
             return (<Grid item xs={4} onClick={() => {goCourse(course.id)}} key={course.id}>
                     <div style={{marginLeft: "auto", marginRight: "auto", marginBottom: "20px", width: "80%"}}>
                     {/*<img src={course.photo} alt={course.name} style={{width: "100%", objectFit: "cover"}}/> <br/>*/}
-                    <span style={{ position: 'relative', float: 'right'}}>{getPrice(course.price)}</span>
+                    {/* <span style={{ position: 'relative', float: 'right'}}>{getPrice(course.price)}</span> */}
                     <h3 style={{ marginTop: '2px', marginBottom: '5px', wordBreak: 'break-word'}}>{course.name}</h3>
                     {getStar(course.avgRating).map((star) => (<Icon style={{color: '#feb22c'}} key={star.id}>{star.value}</Icon>) )}<br/>
                     {course.semester}
@@ -209,9 +211,9 @@ function Home(props) {
           })
           :
           <div className={classes.guyContainer}>
-            {/*<img className={classes.guy} src="/img/guy_fireats.png" alt="guy fireats" />*/}
-            {/*<CircularProgress />*/}
-            <Loader />
+            <Grid container justify="center">
+              <Loader />
+            </Grid>
             <div className="text">
               This app is connected to the Firebase project "<b>{config.projectId}</b>".<br />
               <br />
