@@ -2,6 +2,7 @@ import React, {useState, useEffect, useReducer }  from 'react';
 import Select from 'react-select';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
+import { grey } from '@material-ui/core/colors';
 import Grid from '@material-ui/core/Grid';
 import Icon from '@material-ui/core/Icon';
 import Button from '@material-ui/core/Button';
@@ -34,7 +35,21 @@ const styles = theme => ({
   button: {
     margin: "auto",
     width: "100%",
-  },  
+    // backgroundColor: "blue"
+    borderStyle: "solid"
+  },
+  mainPart: {
+    marginLeft: "auto", 
+    marginRight: "auto", 
+    marginBottom: "20px", 
+    marginTop: "20px", 
+    width: "80%", 
+    cursor: "pointer",
+    backgroundColor: grey[0],
+    '&:hover': {
+      backgroundColor: grey[200],
+    }
+  },
 });
 
 const reducer = (state, action) => {
@@ -193,14 +208,14 @@ function Home(props) {
       <Select options={sortOrderOptions} value={sort} onChange={handleChange} placeholder="Order"/>
       </Grid>*/}
       <Grid item xs={3}>
-      <Button onClick={submitButton} color="primary" className={classes.button} >Sort</Button>
+      <Button variant="contained" onClick={submitButton} color="primary" className={classes.button} >Sort</Button>
       </Grid>
       <Grid item xs={1}>
       </Grid>
         {courses.length > 0 ?
           courses.map((course) => {
             return (<Grid item xs={4} onClick={() => {goCourse(course.id)}} key={course.id}>
-                    <div style={{marginLeft: "auto", marginRight: "auto", marginBottom: "20px", width: "80%"}}>
+                    <div className={classes.mainPart} >
                     {/*<img src={course.photo} alt={course.name} style={{width: "100%", objectFit: "cover"}}/> <br/>*/}
                     {/* <span style={{ position: 'relative', float: 'right'}}>{getPrice(course.price)}</span> */}
                     <h3 style={{ marginTop: '2px', marginBottom: '5px', wordBreak: 'break-word'}}>{course.name}</h3>

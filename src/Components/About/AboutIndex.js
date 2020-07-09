@@ -7,7 +7,8 @@ import { withStyles } from '@material-ui/core/styles';
 const styles = theme => ({
     about: {
         paddingTop: "30px",
-        paddingBottom: "30px"
+        paddingBottom: "30px",
+        width: "90%"
     }
 })
 
