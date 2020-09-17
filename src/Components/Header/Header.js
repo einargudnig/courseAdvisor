@@ -20,7 +20,7 @@ import LinkHome from '@material-ui/core/Link';
 //import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles'
 //import primary from '@material-ui/core/colors/blue';
 //import secondary from '@material-ui/core/colors/deepPurple';
-//import { Switch, FormControlLabel } from '@material-ui/core';
+import { Switch, FormControlLabel } from '@material-ui/core';
 
 /*
 const themeObject = {
@@ -94,7 +94,9 @@ function MyAppBar(props) {
                 About
               </LinkHome>
             </Typography>
-
+            <FormControlLabel
+          control={<Switch  />}
+        />
           </Toolbar>
         </AppBar>
 

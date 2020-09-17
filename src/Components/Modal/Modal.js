@@ -25,7 +25,7 @@ const styles = theme => ({
     width: "60%",
     margin: "auto",
     "text-align": "center",
-    background: "#fff",
+    background: "#696969",
   },
   modalHeader: {
   },

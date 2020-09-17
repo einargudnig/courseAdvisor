@@ -149,6 +149,10 @@ function Course(props) {
     })();
   }, [id, ratings.length]);
 
+
+
+
+  
   /*const addMockRating = async (courseId) => {
     try {
       await FriendlyEatsMock.addMockRatings(courseId);

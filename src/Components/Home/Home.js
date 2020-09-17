@@ -47,7 +47,7 @@ const styles = theme => ({
     cursor: "pointer",
     backgroundColor: grey[0],
     '&:hover': {
-      backgroundColor: grey[200],
+      backgroundColor: grey[500],
     }
   },
 });
