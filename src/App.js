@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { Route, BrowserRouter as Router } from 'react-router-dom';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import { MuiThemeProvider, createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
+import {  createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import { withStyles } from '@material-ui/core/styles';
 import {
   orange,
@@ -27,7 +27,7 @@ import "firebase/firestore";
 import "firebase/auth";
 import config from './config';
 
-import { Switch, FormControlLabel } from '@material-ui/core';
+import { Switch } from '@material-ui/core';
 
 try {
   firebase.initializeApp(config);
@@ -35,6 +35,9 @@ try {
   // console.log(firebase init error)
 }
 
+/*
+*
+* Old theme pallet, changed a bit to have better contrast in darkmode.
 const themeObject = {
   typography: {
     useNextVariants: true,
@@ -47,6 +50,7 @@ const themeObject = {
     type: 'light'
   }
 }
+*/
 
 
 const styles = {
@@ -66,6 +70,8 @@ const styles = {
 };
 
 /* Old dark mode experiment
+*
+* new one works better
 const useDarkMode = () => {
   const [theme, setTheme] = useState(themeObject)
 
@@ -173,9 +179,6 @@ function App(props) {
                 About
               </LinkHome>
             </Typography>
-            {/*<FormControlLabel
-              control={<Switch onClick={toggleDarkMode} />}
-            />*/}
             <BrightnessLowIcon />
             <Switch 
               checked={darkState} onChange={handleThemeChange}

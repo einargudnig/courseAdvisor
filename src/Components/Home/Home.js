@@ -96,6 +96,8 @@ function Home(props) {
       },
     }
 
+
+    /* Filter function */
     try {
       const query = searchState ?
         Data.getFilteredCourses(searchState) :
@@ -138,34 +140,11 @@ function Home(props) {
     return ret;
   };
 
-  /*
-  const getPrice = (price) => {
-    const ret = [];
-    for (let r = 0; r < price; r += 1) {
-      ret.push("$");
-    }
-    return ret;
-  }*/
 
+  /* Choose between Autumn or Spring semester */
   const semesterOptions = ['Autumn', 'Spring'].map((name) => {
     return {value: name, label: name, type: "semester" }
   })
-  // semesterOptions.unshift({value: "Any", label: "semester", type: "semester" });
-
-  /*
-  const categoryOptions = Search.data.category.map((name) => {
-    return {value: name, label: name, type: 'city' }
-  }); 
-  categoryOptions.unshift({value: "Any", label: "category", type: "category" });
-
-  const priceOptions = [ "$", "$$", "$$$", "$$$$"].map((name) => {
-    return {value: name, label: name, type: 'price' }
-  });
-  priceOptions.unshift({value: "Any", label: "全て", type: "price" });
-
-  const sortOrderOptions = ['Rating', 'Reviews'].map((name) => {
-    return {value: name, label: name, type: "sort" }
-  }); */
 
   const handleChange =(e) => {
     const newState = Object.assign({}, state);
@@ -180,14 +159,11 @@ function Home(props) {
   }
   const submitButton = () => { 
     const filters = {
-      //city: getStateValue("city"),
       semester: getStateValue("semester"),
-      // price: getStateValue("price"),
-      // sortOrder: getStateValue("sort"),
     }
     setSearchState(filters);
   }
-  const { /*city,*/ semester , /*price, sort*/ } = state;
+  const { semester  } = state;
 
   return (
     <React.Fragment>
@@ -195,18 +171,9 @@ function Home(props) {
       <AboutIndex />
       <Grid item xs={2}>
       </Grid>
-      {/*<Grid item xs={2}>
-      <Select options={citiesOptions} value={city} onChange={handleChange} placeholder="都道府県"/>
-      </Grid>*/}
       <Grid item xs={3}>
       <Select options={semesterOptions} value={semester} onChange={handleChange} placeholder="Semester"/>
       </Grid>
-      {/*<Grid item xs={2}>
-      <Select options={priceOptions} value={price} onChange={handleChange} placeholder="金額"/>
-      </Grid>
-      <Grid item xs={2}>
-      <Select options={sortOrderOptions} value={sort} onChange={handleChange} placeholder="Order"/>
-      </Grid>*/}
       <Grid item xs={3}>
       <Button variant="contained" onClick={submitButton} color="primary" className={classes.button} >Sort</Button>
       </Grid>
@@ -216,8 +183,6 @@ function Home(props) {
           courses.map((course) => {
             return (<Grid item xs={4} onClick={() => {goCourse(course.id)}} key={course.id}>
                     <div className={classes.mainPart} >
-                    {/*<img src={course.photo} alt={course.name} style={{width: "100%", objectFit: "cover"}}/> <br/>*/}
-                    {/* <span style={{ position: 'relative', float: 'right'}}>{getPrice(course.price)}</span> */}
                     <h3 style={{ marginTop: '2px', marginBottom: '5px', wordBreak: 'break-word'}}>{course.name}</h3>
                     {getStar(course.avgRating).map((star) => (<Icon style={{color: '#feb22c'}} key={star.id}>{star.value}</Icon>) )}<br/>
                     {course.semester}
@@ -232,10 +197,10 @@ function Home(props) {
             <div className="text">
               This app is connected to the Firebase project "<b>{config.projectId}</b>".<br />
               <br />
-              Your Cloud Firestore has no documents in <b>/courses/</b>.
+              Your Cloud Firestore has no documents in <b>/courses/</b>. Try to refresh !!
             </div>
             <br />
-          {/* <Button onClick={() => importData()} color="primary" className={classes.button} >Import Data</Button> */}
+
 
 
           </div>

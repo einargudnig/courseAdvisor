@@ -20,7 +20,7 @@ import * as firebase from "firebase/app";
 import "firebase/auth";
 
 import * as Data from '../../Courses/Data';
-//import * as FriendlyEatsMock from './FriendlyEats/FriendlyEats.Mock';
+
 
 const styles = theme => ({
   root: {
@@ -153,7 +153,9 @@ function Course(props) {
 
 
   
-  /*const addMockRating = async (courseId) => {
+  /*
+  * Mock rating for testing
+  const addMockRating = async (courseId) => {
     try {
       await FriendlyEatsMock.addMockRatings(courseId);
     } catch (e) {
@@ -204,6 +206,11 @@ function Course(props) {
   };
 
   /*
+  *
+  * Main idea was to have three ratings and than calculate one main rating from those three.
+  * Load, Difficulty and Practicality
+  * It is likely that I will add and change this later, to have more detailed stats.
+  * So that is the reason for this commented code, I can start from here if I want to add this!
   const renderRatingLoad = (rating) => {
     const ret = [];
     for (let r = 0; r < 5; r += 1) {
@@ -301,13 +308,13 @@ function Course(props) {
       </div>
       <div className={classes.modalWindowContent}>
         
-          <span> Here you can give this course a rating from one to five. </span> <br />
-          <span> It is recommended that if you write a review it is well informing for other students. </span> <br />
-          <span> The review can be informing if it, for example: </span> <br />
+          <p> Here you can give this course a rating from one to five. </p> <br />
+          <p> It is recommended that if you write a review it is well informing for other students. </p> <br />
+          <p> The review can be informing if it, for example: </p> <br />
           <span>  - touches on practicality of the course content,  </span> <br />
           <span>  - difficulty of the course contents, projects and/or exams,  </span> <br />
           <span>  - amount of homework/projects.  </span> <br />
-          <span> Note that the reviews are anonymous. </span>
+          <p> Note that the reviews are anonymous. </p>
         <div className={classes.modalWindowContentStar}>
           {randerRatingInput()}
         </div>
